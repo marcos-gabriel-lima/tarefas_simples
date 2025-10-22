@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <h1>📝 Sistema de Tarefas</h1>
+                <p>Gerencie suas tarefas pessoais</p>
+            </div>
+            
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="username">Nome do Usuário:</label>
+                    <input type="text" id="username" placeholder="Digite seu nome de usuário" maxlength="20">
+                </div>
+                
+                <div class="form-group">
+                    <label for="userPassword">Senha:</label>
+                    <input type="password" id="userPassword" placeholder="Digite sua senha" maxlength="30">
+                </div>
+                
+                <div class="login-actions">
+                    <button id="loginBtn" class="btn-primary">Entrar</button>
+                    <button id="registerBtn" class="btn-secondary">Registrar</button>
+                </div>
+                
+                <div class="user-list">
+                    <h3>Usuários Cadastrados:</h3>
+                    <div id="usersList" class="users-list">
+                        <!-- Usuários serão listados aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sistema Principal -->
+    <div id="mainScreen" class="container" style="display: none;">
+        <header>
+            <div class="header-content">
+                <h1>📝 Minhas Tarefas</h1>
+                <div class="user-info">
+                    <span id="currentUser">Usuário</span>
+                    <button id="logoutBtn" class="logout-btn">Sair</button>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="add-task-section">
+                <input type="text" id="taskInput" placeholder="Digite uma nova tarefa..." maxlength="100">
+                <button id="addTaskBtn">Adicionar</button>
+            </div>
+            
+            <div class="tasks-section">
+                <div class="tasks-header">
+                    <h2>Tarefas Pendentes</h2>
+                    <span id="pendingCount">0</span>
+                </div>
+                <ul id="tasksList" class="tasks-list">
+                    <!-- Tarefas serão adicionadas aqui dinamicamente -->
+                </ul>
+            </div>
+            
+            <div class="completed-section">
+                <div class="completed-header">
+                    <h2>Tarefas Concluídas</h2>
+                    <div class="completed-actions">
+                        <span id="completedCount">0</span>
+                        <button id="resetTasksBtn" class="reset-btn" title="Reiniciar todas as tarefas concluídas">
+                            🔄 Reiniciar
+                        </button>
+                    </div>
+                </div>
+                <ul id="completedList" class="completed-list">
+                    <!-- Tarefas concluídas serão adicionadas aqui -->
+                </ul>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
