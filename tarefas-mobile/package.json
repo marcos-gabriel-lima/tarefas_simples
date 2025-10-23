@@ -1,0 +1,50 @@
+{
+  "name": "tarefas-mobile",
+  "version": "1.0.0",
+  "description": "Sistema de Gerenciamento de Tarefas - Aplicativo Mobile",
+  "productName": "Sistema de Tarefas",
+  "author": "Marco",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:android": "vite build && npx cap sync android && npx cap build android",
+    "cap:android": "npx cap run android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@quasar/extras": "^1.16.9",
+    "@quasar/vite-plugin": "^1.10.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "pinia": "^2.3.1",
+    "quasar": "^2.14.0",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@quasar/app-webpack": "^3.0.0",
+    "@quasar/cli": "^1.3.0",
+    "@vue/compiler-sfc": "^3.4.0",
+    "vite": "^5.0.0"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": "^18 || ^16 || ^14",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
